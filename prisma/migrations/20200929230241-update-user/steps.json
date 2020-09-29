@@ -1,0 +1,17 @@
+{
+  "version": "0.3.14-fixed",
+  "steps": [
+    {
+      "tag": "UpdateField",
+      "model": "Link",
+      "field": "postedBy",
+      "arity": "Required"
+    },
+    {
+      "tag": "UpdateField",
+      "model": "Link",
+      "field": "postedById",
+      "arity": "Required"
+    }
+  ]
+}

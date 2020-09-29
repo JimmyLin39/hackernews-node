@@ -6,15 +6,16 @@ async function main() {
   const newLink = await prisma.link.create({
     data: {
       description: 'Fullstack tutorial for GraphQL',
-      url: 'www.howtographql.com'
-    }
+      url: 'www.howtographql.com',
+    },
   });
   const allLinks = await prisma.link.findMany();
-  console.log(allLinks);
+  const singleLink = await prisma.link.findOne({ where: { id: 1 } });
+  console.log(singleLink);
 }
 
 main()
-  .catch((e) => {
+  .catch(e => {
     throw e;
   })
   .finally(async () => {
